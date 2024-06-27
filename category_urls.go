@@ -155,7 +155,7 @@ func (s *EbayScraper) isLeafCategoryPage(h *colly.HTMLElement) bool {
 			return 
 		}
 
-		if title != "Shop by Category" && isRootPage(s.config.TargetURL, url) {
+		if title != "Shop by Category" && !isRootPage(s.config.TargetURL, url) {
 			isLeaf = true
 		}
 	}
